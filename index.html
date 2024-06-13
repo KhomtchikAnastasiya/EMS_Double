@@ -9,26 +9,28 @@
 </head>
 
 <body>
-    <main class="content">
-        <div class="content_info">
-            <h1 class="content_title">Демо-версия</h1>
-            <p>За 18 лет деятельности было реализовано более 500 крупных, а так же, не менее 2500 средних и
-                малых проектов. Используя знания и накопленный опыт мы можем предложить</p>
-            <button type="button">Попробовать бесплатно</button>
-        </div>
-        <div class="content_img">
-            <img src="img/computer.png" alt="computer image">
-        </div>
+    <main class="main">
+        <section class="content">
+            <div class="content_info">
+                <h1 class="content_title">Демо-версия</h1>
+                <p class="content_text">За 18 лет деятельности было реализовано более 500 крупных, а так же, не менее 2500 средних и
+                    малых проектов. Используя знания и накопленный опыт мы можем предложить</p>
+                <button type="button" class="button button__dark">Попробовать бесплатно</button>
+            </div>
+            <div class="content_img">
+                <img src="img/computer.png" alt="computer image">
+            </div>
+        </section>
     </main>
-    <section class="modal-window">
-        <div>
+    <section class="modal_window">
+        <div class="modal_close">
             <img src="img/cross.svg" alt="close button">
         </div>
-        <h2>Войти в систему</h2>
+        <h2 class="modal_title">Войти в систему</h2>
         <form action="#" method="post" name="login_form" class="login_form" id="login_form">
             <input type="text" class="form_item form_input" name="email_telephone" placeholder="Email/Телефон">
             <input type="text" class="form_item form_input" name="password" placeholder="Пароль">
-            <div class="form_item">
+            <div class="form_item form_checkbox-wrap">
                 <input type="checkbox" name="save" class="form_checkbox" id="form_checkbox">
                 <label for="form_checkbox" class="form_checkbox-label">Запомнить пароль</label>
             </div>

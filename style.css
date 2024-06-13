@@ -1,0 +1,293 @@
+@font-face {
+    font-family: 'Manrope';
+    src: local('Manrope'), url('./fonts/Manrope/Manrope-Medium.ttf');
+    font-weight: 500;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Manrope';
+    src: local('Manrope'), url('./fonts/Manrope/Manrope-Regular.ttf');
+    font-weight: 400;
+    font-style: normal;
+}
+
+:root {
+    --color-primary-dark: #244C98;
+    --color-primary-light: #EBF0FA;
+    --color-additional-light: #F0F4FC;
+    --color-text-dark: #1F4284;
+    --color-text-middle: #727272;
+    --color-text-light: #FFFFFF;
+}
+
+html {
+    font-size: 10px;
+}
+
+body {
+    margin: 0;
+    font-family: 'Manrope', sans-serif;
+    font-weight: 400;
+    line-height: 160%;
+    font-size: 1.7rem;
+    color: var(--color-text-middle);
+    height: 100vh;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+main {
+    max-width: 1920px;
+    margin: 0 auto;
+    padding: 3.6rem 4rem;
+}
+
+.content {
+    background-color: var(--color-primary-light);
+    border-radius: 10px;
+    display: flex;
+    flex-direction: row;
+}
+
+.content_info {
+    padding: 10.2rem 7.2rem 10.2rem 7.2rem;
+}
+
+.content_title {
+    font-size: 3rem;
+    font-weight: 500;
+    color: var(--color-text-dark);
+    margin: 0 0 1.8rem 0;
+}
+
+.content_text {
+    max-width: 51.1rem;
+}
+
+.button {
+    margin: 3.6rem 0 0;
+    padding: 1.95rem 10.4rem 1.95rem 2.4rem;
+    border: none;
+    border-radius: 60px;
+    color: var(--color-text-light);
+    font-size: 1.8rem;
+    line-height: 160%;
+    position: relative;
+}
+
+.button::after {
+    content: '';
+    background-image: url("img/arrow-up-right.svg");
+    height: 4.4rem;
+    width: 4.4rem;
+    background-size: 24px 24px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-color: var(--color-text-light);
+    border-radius: 40px;
+    position: absolute;
+    top: 1.2rem;
+    right: 1.2rem;
+}
+
+.button__dark {
+    background-color: var(--color-primary-dark);
+    color: var(--color-text-light);
+}
+
+.button__light {
+    background-color: var(--color-text-light);
+    color: var(--color-primary-dark);
+}
+
+.content_info,
+.content_img {
+    width: 50%;
+    flex-shrink: 1;
+}
+
+.content_img img {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+.modal_window {
+    width: 50rem;
+    height: 57.5rem;
+    padding: 2.4rem;
+    background-color: var(--color-additional-light);
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    line-height: 100%;
+}
+
+.modal_close {
+    position: absolute;
+    height: 5.2rem;
+    width: 5.2rem;
+    background-color: var(--color-text-light);
+    border-radius: 10px;
+    padding: 1.4rem;
+    right: 2.4rem;
+}
+
+.modal_title {
+    color: #323232;
+    font-weight: 500;
+    font-size: 2.4rem;
+    margin-top: 8rem;
+    margin-bottom: 1.8rem;
+}
+
+.form_input {
+    padding: 2.4rem;
+    background-color: #D7E2F6;
+    color: var(--color-text-dark);
+    font-weight: 500;
+    font-size: 1.8rem;
+    border: none;
+    border-radius: 10px;
+    margin-bottom: 0.4rem;
+}
+
+.form_input::placeholder {
+    color: var(--color-text-dark);
+    font-weight: 500;
+    font-size: 1.8rem;
+}
+
+.form_item {
+    width: 100%;
+}
+
+.form_checkbox-wrap {
+    margin-top: 2.4rem;
+    margin-bottom: 2.4rem;
+}
+
+.form_checkbox {
+    height: 1.8rem;
+    width: 1.8rem;
+    border: #323232 solid 2px;
+    border-radius: 3px;
+}
+
+.form_checkbox-label {
+    font-weight: 500;
+    font-size: 1.8rem;
+    color: #323232;
+}
+
+a.form_item,
+a.form_item:visited {
+    display: inline-block;
+    font-weight: 500;
+    font-size: 2rem;
+    color: var(--color-primary-dark);
+    text-decoration: none;
+    margin-bottom: 3.2rem;
+}
+
+.form_button {
+    width: 100%;
+    padding: 1.8rem;
+    border: 1px solid var(--color-primary-dark);
+    border-radius: 4px;
+    margin-top: 0.4rem;
+    font-weight: 500;
+    font-size: 1.8rem;
+    line-height: 160%;
+}
+
+@media screen and (max-width: 1920px) {
+
+    .content_info {
+        padding: 10.5rem 0rem 10.5rem 7.2rem;
+    }
+
+    .content_title {
+        font-size: 2.6rem;
+    }
+}
+
+@media screen and (max-width: 1440px) {
+   
+.content {
+    flex-direction: column;
+}
+main {
+    padding: 2.4rem;
+}
+
+.content_info {
+    padding: 2.4rem 2.4rem 0rem 2.4rem;
+    margin-bottom: 2.4rem;
+    width: 100%;
+}
+
+.content_title {
+    font-size: 2rem;
+}
+
+.content_text {
+    max-width: 100%;
+    font-size: 1.5rem;
+}
+
+.content_img {
+    width: 100%;
+    max-width: 72rem;
+    margin: 0 auto;
+}
+
+
+.button {
+    margin: 2.4rem 0 0;
+    padding: 1.6rem 6.5rem 1.6rem 1.8rem;
+    font-size: 1.5rem;
+}
+
+.button::after {
+    height: 3.6rem;
+    width: 3.6rem;  
+    top: 1rem;
+    right: 1rem;
+}
+
+
+}
+
+
+
+@media screen and (max-width: 768px) {
+   
+    main {
+        padding: 1.4rem 2.4rem;
+    }
+    
+    .content_info {
+        margin-bottom: 1.8rem;
+    }
+    
+    .content_title {
+        font-size: 1.7rem;
+        margin: 0 0 1.4rem 0;
+    }
+    
+    .content_text {
+        font-size: 1.3rem;
+    }
+
+
+.button {
+    margin: 1.8rem 0 0;
+}
+
+    }
