@@ -76,6 +76,7 @@ main {
     font-size: 1.8rem;
     line-height: 160%;
     position: relative;
+    cursor: pointer;
 }
 
 .button::after {
@@ -117,15 +118,32 @@ main {
     border-bottom-right-radius: 10px;
 }
 
+
+.modal_wrapper {
+    display: none;
+    background: rgba(0, 0, 0, 0.8);
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    cursor: pointer;
+    z-index: 1;
+}
+
 .modal_window {
+    position: absolute;
     width: 50rem;
     height: 57.5rem;
+    top: calc(50% - 28.75rem);
+    left: calc(50% - 25rem);
     padding: 2.4rem;
     background-color: var(--color-additional-light);
     display: flex;
     flex-direction: column;
     position: relative;
     line-height: 100%;
+    cursor: default;
 }
 
 .modal_close {
@@ -136,6 +154,7 @@ main {
     border-radius: 10px;
     padding: 1.4rem;
     right: 2.4rem;
+    cursor: pointer;
 }
 
 .modal_title {
@@ -204,6 +223,7 @@ a.form_item:visited {
     font-weight: 500;
     font-size: 1.8rem;
     line-height: 160%;
+    cursor: pointer;
 }
 
 @media screen and (max-width: 1920px) {
@@ -218,48 +238,49 @@ a.form_item:visited {
 }
 
 @media screen and (max-width: 1440px) {
-   
-.content {
-    flex-direction: column;
-}
-main {
-    padding: 2.4rem;
-}
 
-.content_info {
-    padding: 2.4rem 2.4rem 0rem 2.4rem;
-    margin-bottom: 2.4rem;
-    width: 100%;
-}
+    .content {
+        flex-direction: column;
+    }
 
-.content_title {
-    font-size: 2rem;
-}
+    main {
+        padding: 2.4rem;
+    }
 
-.content_text {
-    max-width: 100%;
-    font-size: 1.5rem;
-}
+    .content_info {
+        padding: 2.4rem 2.4rem 0rem 2.4rem;
+        margin-bottom: 2.4rem;
+        width: 100%;
+    }
 
-.content_img {
-    width: 100%;
-    max-width: 72rem;
-    margin: 0 auto;
-}
+    .content_title {
+        font-size: 2rem;
+    }
+
+    .content_text {
+        max-width: 100%;
+        font-size: 1.5rem;
+    }
+
+    .content_img {
+        width: 100%;
+        max-width: 72rem;
+        margin: 0 auto;
+    }
 
 
-.button {
-    margin: 2.4rem 0 0;
-    padding: 1.6rem 6.5rem 1.6rem 1.8rem;
-    font-size: 1.5rem;
-}
+    .button {
+        margin: 2.4rem 0 0;
+        padding: 1.6rem 6.5rem 1.6rem 1.8rem;
+        font-size: 1.5rem;
+    }
 
-.button::after {
-    height: 3.6rem;
-    width: 3.6rem;  
-    top: 1rem;
-    right: 1rem;
-}
+    .button::after {
+        height: 3.6rem;
+        width: 3.6rem;
+        top: 1rem;
+        right: 1rem;
+    }
 
 
 }
@@ -267,27 +288,88 @@ main {
 
 
 @media screen and (max-width: 768px) {
-   
+
     main {
         padding: 1.4rem 2.4rem;
     }
-    
+
     .content_info {
         margin-bottom: 1.8rem;
     }
-    
+
     .content_title {
         font-size: 1.7rem;
         margin: 0 0 1.4rem 0;
     }
-    
+
     .content_text {
         font-size: 1.3rem;
     }
 
 
-.button {
-    margin: 1.8rem 0 0;
-}
-
+    .button {
+        margin: 1.8rem 0 0;
     }
+
+
+
+    .modal_window {
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        padding: 0.4rem;
+    }
+
+    .modal_close {
+        height: 3.4rem;
+        width: 3.4rem;
+        padding: 0.5rem;
+        right: 0.4rem;
+    }
+
+    .modal_title {
+        font-size: 1.7rem;
+        margin-top: 4rem;
+        margin-bottom: 1.2rem;
+    }
+
+    .form_input {
+        padding: 1rem;
+        font-size: 1.3rem;
+        margin-bottom: 0.4rem;
+    }
+
+    .form_input::placeholder {
+        font-size: 1.3rem;
+    }
+
+
+    .form_checkbox-wrap {
+        margin-top: 1.4rem;
+        margin-bottom: 1.4rem;
+    }
+
+    .form_checkbox {
+        height: 1.4rem;
+        width: 1.4rem;
+    }
+
+    .form_checkbox-label {
+        font-size: 1.3rem;
+    }
+
+
+    a.form_item,
+    a.form_item:visited {
+        font-size: 1.3rem;
+        margin-bottom: 2.2rem;
+    }
+
+    .form_button {
+        padding: 1rem;
+        margin-top: 0.4rem;
+        font-size: 1.3rem;
+    }
+
+}
